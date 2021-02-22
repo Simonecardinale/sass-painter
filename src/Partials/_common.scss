@@ -32,3 +32,9 @@
     background-color: white;
     color: black;
 } 
+
+@mixin container {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
