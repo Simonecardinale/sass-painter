@@ -53,6 +53,58 @@ nav {
   margin-left: 5px;
 }
 
+.jumbotron {
+  height: 70vh;
+  background-image: url("https://www.painterartist.com/static/ptr/images/home/bg-painter-home.jpg");
+  background-size: cover;
+}
+.jumbotron .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.jumbotron .container .container-text {
+  width: 50%;
+}
+.jumbotron .container .container-text img {
+  height: 50px;
+}
+.jumbotron .container .container-text h2 {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 30px 0;
+}
+.jumbotron .container .container-text h3:nth-child(3) {
+  font-weight: bold;
+  color: fuchsia;
+}
+.jumbotron .container .container-text h3:last-child {
+  font-size: 18px;
+  font-weight: 100;
+  color: fuchsia;
+}
+.jumbotron .container .container-text .cta-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30px 0;
+}
+.jumbotron .container .container-text .cta-container .learn-more {
+  padding: 15px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  margin-right: 20px;
+}
+.jumbotron .container .container-text .cta-container .download-trial {
+  padding: 15px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+
 * {
   padding: 0;
   margin: 0;

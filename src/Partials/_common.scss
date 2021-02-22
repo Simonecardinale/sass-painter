@@ -4,14 +4,14 @@
     align-items: $align;
 }
 
-@mixin h3-standard {
-    font-size: 18px;
-    font-weight: 0;
+@mixin h2-standard {
+    font-size: 20px;
+    font-weight: 100;
 }
 
-@mixin h2-standard {
-    font-size: 16px;
-    font-weight: 0;
+@mixin h3-standard {
+    font-size: 18px;
+    font-weight: 100;
 }
 
 @mixin p-standard {
@@ -19,16 +19,23 @@
 }
 
 @mixin black-cta {
+    padding: 15px;
+    font-size: 20px;
     background-color: black;
     color: white;
 }
 
 @mixin nobcg-cta {
+    padding: 15px;
+    font-size: 20px;
     background-color: transparent;
+    border: 2px solid black;
     color: black;
 }
 
 @mixin white-cta {
+    padding: 15px;
+    font-size: 20px;
     background-color: white;
     color: black;
 } 
