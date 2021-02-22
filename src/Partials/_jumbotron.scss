@@ -18,7 +18,7 @@
                 font-weight: bold;
                 color: fuchsia;
             }
-            h3:last-child {
+            h3:nth-child(4) {
                 @include h3-standard;
                 color: fuchsia;
             }

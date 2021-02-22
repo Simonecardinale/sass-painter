@@ -79,7 +79,7 @@ nav {
   font-weight: bold;
   color: fuchsia;
 }
-.jumbotron .container .container-text h3:last-child {
+.jumbotron .container .container-text h3:nth-child(4) {
   font-size: 18px;
   font-weight: 100;
   color: fuchsia;
