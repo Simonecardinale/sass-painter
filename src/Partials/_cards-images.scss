@@ -1,0 +1,59 @@
+.container-cards-image {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-images {
+    @include cards-images;
+}
+
+.purple {
+    background-color: $purple;
+}
+
+.grey {
+    background-color: $grey;
+}
+
+.lightblue {
+    background-color: $lightblue;
+}
+
+.cards-images .container{
+    h2 {
+        margin: 30px 0;
+        padding: 0;
+        color: white;
+    }
+    h3 {
+        @include h3-standard;
+        color: white;
+    }
+    .learn-more-white {
+        margin-top: 20px;
+        @include white-cta;
+    }
+}
+
+.photo {
+    background-image: url('https://www.painterartist.com/static/ptr/images/home/wacom.png');
+    background-size: 170%;
+    background-position: center;
+    img {
+        width: 75%;
+    }
+}
+
+.eye {
+    background-image: url('https://www.painterartist.com/static/ptr/images/home/painter-master.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.write {
+    background-image: url('https://www.painterartist.com/static/ptr/images/home/business-education.jpg');
+    background-size: cover;
+    background-position: center;
+}

@@ -49,3 +49,8 @@
 @mixin cards-general {
     width: calc(100% / 3 - 20px);
 }
+
+@mixin cards-images {
+    width: 50%;
+    height: 300px;
+}
