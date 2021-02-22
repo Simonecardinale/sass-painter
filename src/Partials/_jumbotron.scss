@@ -13,6 +13,7 @@
             h2 {
                 @include h2-standard;
                 margin: 30px 0;
+                padding: 0;
             }
             h3:nth-child(3) {
                 font-weight: bold;

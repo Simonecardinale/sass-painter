@@ -74,6 +74,7 @@ nav {
   font-size: 20px;
   font-weight: 100;
   margin: 30px 0;
+  padding: 0;
 }
 .jumbotron .container .container-text h3:nth-child(3) {
   font-weight: bold;
@@ -95,7 +96,11 @@ nav {
   font-size: 20px;
   background-color: black;
   color: white;
+  cursor: pointer;
   margin-right: 20px;
+}
+.jumbotron .container .container-text .cta-container .learn-more:hover {
+  background-color: #333333;
 }
 .jumbotron .container .container-text .cta-container .download-trial {
   padding: 15px;
@@ -103,6 +108,7 @@ nav {
   background-color: transparent;
   border: 2px solid black;
   color: black;
+  cursor: pointer;
 }
 
 .container {
@@ -155,6 +161,8 @@ nav {
   margin-top: 50px;
   width: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -191,6 +199,10 @@ nav {
   font-size: 20px;
   background-color: white;
   color: black;
+  cursor: pointer;
+}
+.cards-images .container .learn-more-white:hover {
+  background-color: #cccccc;
 }
 
 .photo {

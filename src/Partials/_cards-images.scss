@@ -1,8 +1,8 @@
 .container-cards-image {
     margin-top: 50px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    @include display-flex($justify: flex-start, $align: center);
+    flex-wrap: wrap
 }
 
 .cards-images {
