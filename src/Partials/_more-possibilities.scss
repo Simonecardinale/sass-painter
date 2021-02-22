@@ -1,0 +1,39 @@
+.container {
+    @include display-flex($justify: center, $align: flex-start);
+    flex-direction: column;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin: auto;
+    padding: 30px;
+}
+
+.cards-container {
+    width: 100%;
+    @include display-flex($justify: space-around, $align: center);
+}
+
+.cards {
+    @include cards-general;
+    background-color: white;
+    img {
+        width: 100%;
+    }
+    h2 {
+        @include h2-standard;
+        padding-left: 0;
+        font-weight: bold;
+    }
+    h3 {
+        @include h3-standard;
+    }
+    h3:last-child {
+        margin-top: 30px;
+        color: blue;
+    } 
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

@@ -45,3 +45,7 @@
     width: 90%;
     margin: auto;
 }
+
+@mixin cards-general {
+    width: calc(100% / 3 - 20px);
+}

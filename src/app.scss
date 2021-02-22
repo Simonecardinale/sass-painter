@@ -2,10 +2,15 @@
 @import "Partials/variables";
 @import "Partials/nav";
 @import "Partials/jumbotron";
+@import "Partials/more-possibilities";
 
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #e8e8e8;
 }
