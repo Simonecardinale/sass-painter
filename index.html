@@ -9,250 +9,211 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app">
     <!-- nav -->
-    <nav>
-        <div class="container">
-            <div class="top">
-                <ul>
-                    <li><i class="fas fa-phone-alt"></i>1-877-582-6735</li>
-                    <li><i class="fas fa-comment-alt"></i>Chat</li>
-                    <li><i class="fas fa-user"></i>Sign in</li>
-                    <li><i class="fas fa-shopping-cart"></i>Cart</li>
-                    <select name="" id="">
-                        <option value="">English</option>
-                        <option value="">Italiano</option>
-                    </select>
-                </ul>
-            </div>
-            <div class="bottom">
-                <img src="https://www.painterartist.com/static/ptr/images/logo_painter.png" alt="">
-                <ul>
-                    <li>Products<i class="fas fa-chevron-down"></i>
-                        <div class="box-li">
-                            <ul>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Brushes<i class="fas fa-chevron-down"></i>
-                        <div class="box-li">
-                            <ul>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Wacom Tablets</li>
-                    <li>Special Offers</li>
-                    <li>Free Trials</li>
-                    <li>Business</li>
-                    <li>Support<i class="fas fa-chevron-down"></i>
-                        <div class="box-li">
-                            <ul>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Learing<i class="fas fa-chevron-down"></i>
-                        <div class="box-li">
-                            <ul>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                                <li>item</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- /nav -->
-    <!-- jumbotron -->
-    <div class="jumbotron">
-        <div class="container">
-            <div class="container-text">
-                <img src="https://www.painterartist.com/static/ptr/images/home/painter-2021-wm-black.png" alt="">
-                <h2>The most realistic painting experience you'll find hard to resist</h2>
-                <h3>Limited-time offerGet</h3>
-                <h3>Signature Style Brush Pack Bundle FREE (worth $179.99)</h3>
-                <div class="cta-container">
-                    <div class="learn-more">LEARN MORE</div>
-                    <div class="download-trial">DOWNLOAD TRIAL</div>
+        <nav>
+            <div class="container">
+                <div class="top">
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i>1-877-582-6735</li>
+                        <li><i class="fas fa-comment-alt"></i>Chat</li>
+                        <li><i class="fas fa-user"></i>Sign in</li>
+                        <li><i class="fas fa-shopping-cart"></i>Cart</li>
+                        <select name="" id="">
+                            <option value="">English</option>
+                            <option value="">Italiano</option>
+                        </select>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <img src="https://www.painterartist.com/static/ptr/images/logo_painter.png" alt="">
+                    <ul>
+                        <li v-for="(val, index) in menu">{{val.name}}
+                            <span v-if="menu[index].voice"><i class="fas fa-chevron-down"></i></span>
+                            <div v-if="menu[index].voice" class="box-li">
+                                <ul>
+                                    <li v-for="(item, index) in menu[index].voice">{{item}}</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
+        <!-- /nav -->
+        <!-- jumbotron -->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="container-text">
+                    <img src="https://www.painterartist.com/static/ptr/images/home/painter-2021-wm-black.png" alt="">
+                    <h2>The most realistic painting experience you'll find hard to resist</h2>
+                    <h3>Limited-time offerGet</h3>
+                    <h3>Signature Style Brush Pack Bundle FREE (worth $179.99)</h3>
+                    <div class="cta-container">
+                        <div class="learn-more">LEARN MORE</div>
+                        <div class="download-trial">DOWNLOAD TRIAL</div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+        <!-- /jumbotron -->
+        <!-- section more painting possibilities -->
+        <section>
+            <div class="container">
+                <h2>More painting possibilities</h2>
+                <div class="cards-container">
+                    <div class="cards">
+                        <img src="https://www.painterartist.com/static/ptr/images/home/ptr-module.jpg" alt="">
+                        <div class="cards-text-container">
+                            <h2><em style="color: blue">NEW</em> Painter Essential 8</h2>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
+                            <h3>Learn more</h3>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="https://www.painterartist.com/static/ptr/images/home/particleshop-module.jpg" alt="">
+                        <div class="cards-text-container">
+                            <h2>ParticleShop</h2>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
+                            <h3>Learn more</h3>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="https://www.painterartist.com/static/ptr/images/home/brush-pack-module.jpg" alt="">
+                        <div class="cards-text-container">
+                            <h2>Brush Packs</h2>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
+                            <h3>Learn more</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section more painting possibilities -->
+        <!-- section cards images -->
+        <section>
+            <div class="container">
+                <div class="container-cards-image">
+                    <div class="cards-images purple">
+                        <div class="container">
+                            <h2>Wacom + Painter 2021</h2>
+                            <h3>Satisfy all your digital painting needs with the power and precision of these award-winning bundles.</h3>
+                            <div class="learn-more-white">LEARN MORE</div>
+                        </div>
+                    </div>
+                    <div class="cards-images photo">
+                        <img src="https://www.painterartist.com/static/ptr/images/home/wacom.png" alt="">
+                    </div>
+                    <div class="cards-images eye"></div>
+                    <div class="cards-images grey">
+                        <div class="container">
+                            <h2>Painter Masters</h2>
+                            <h3>Gain inspiration and knowledge from professional artists who have mastered Painter, and excel in their craft.</h3>
+                            <div class="learn-more-white">LEARN MORE</div>
+                        </div>
+                    </div>
+                    <div class="cards-images lightblue">
+                        <div class="container">
+                            <h2>Business & Education</h2>
+                            <h3>Save money on our award-winning painting software thanks to affordable and flexible licensing options.</h3>
+                            <div class="learn-more-white">LEARN MORE</div>
+                        </div>
+                    </div>
+                    <div class="cards-images write"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- /section cards images -->
+        <!-- section info -->
+
+        <section>
+            <div class="container">
+                <div class="container-section">
+                    <div class="info-container">
+                        <ul>
+                            <p>Products</p>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ul>
+                    </div>
+                    <div class="info-container">
+                        <ul>
+                            <p>Quick Links</p>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ul>
+                    </div>
+                    <div class="info-container">
+                        <ul>
+                            <p>Support</p>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ul>
+                    </div>
+                    <div class="info-container">
+                        <ul>
+                            <p>About Corel</p>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-container">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fas fa-rss"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- /section info -->
+        <!-- footer  -->
+
+        <footer>
+            <div class="container">
+                <div class="container-footer">
+                    <div class="icons-container">
+                        <img src="https://www.painterartist.com/static/ptr/corelAdvantage.png" alt="">
+                        <img src="https://www.painterartist.com/static/common/images/logo-bbb.png" alt="">
+                        <img src="https://www.painterartist.com/static/common/images/logo-bbb.png" alt="">
+                    </div>
+                    <div class="list-container">
+                        <ul>
+                            <li>Terms of Use</li>
+                            <li>Privacy</li>
+                            <li>Cookies</li>
+                            <li>Copyright © 2021 Corel Corporation. All rights reserved.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    <!-- /jumbotron -->
-    <!-- section more painting possibilities -->
-    <section>
-        <div class="container">
-            <h2>More painting possibilities</h2>
-            <div class="cards-container">
-                <div class="cards">
-                    <img src="https://www.painterartist.com/static/ptr/images/home/ptr-module.jpg" alt="">
-                    <div class="cards-text-container">
-                        <h2><em style="color: blue">NEW</em> Painter Essential 8</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
-                        <h3>Learn more</h3>
-                    </div>
-                </div>
-                <div class="cards">
-                    <img src="https://www.painterartist.com/static/ptr/images/home/particleshop-module.jpg" alt="">
-                    <div class="cards-text-container">
-                        <h2>ParticleShop</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
-                        <h3>Learn more</h3>
-                    </div>
-                </div>
-                <div class="cards">
-                    <img src="https://www.painterartist.com/static/ptr/images/home/brush-pack-module.jpg" alt="">
-                    <div class="cards-text-container">
-                        <h2>Brush Packs</h2>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis sunt veritatis corrupti nihil earum numquam</h3>
-                        <h3>Learn more</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /section more painting possibilities -->
-    <!-- section cards images -->
-    <section>
-        <div class="container">
-            <div class="container-cards-image">
-                <div class="cards-images purple">
-                    <div class="container">
-                        <h2>Wacom + Painter 2021</h2>
-                        <h3>Satisfy all your digital painting needs with the power and precision of these award-winning bundles.</h3>
-                        <div class="learn-more-white">LEARN MORE</div>
-                    </div>
-                </div>
-                <div class="cards-images photo">
-                    <img src="https://www.painterartist.com/static/ptr/images/home/wacom.png" alt="">
-                </div>
-                <div class="cards-images eye"></div>
-                <div class="cards-images grey">
-                    <div class="container">
-                        <h2>Painter Masters</h2>
-                        <h3>Gain inspiration and knowledge from professional artists who have mastered Painter, and excel in their craft.</h3>
-                        <div class="learn-more-white">LEARN MORE</div>
-                    </div>
-                </div>
-                <div class="cards-images lightblue">
-                    <div class="container">
-                        <h2>Business & Education</h2>
-                        <h3>Save money on our award-winning painting software thanks to affordable and flexible licensing options.</h3>
-                        <div class="learn-more-white">LEARN MORE</div>
-                    </div>
-                </div>
-                <div class="cards-images write"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- /section cards images -->
-    <!-- section info -->
-
-    <section>
-        <div class="container">
-            <div class="container-section">
-                <div class="info-container">
-                    <ul>
-                        <p>Products</p>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                    </ul>
-                </div>
-                <div class="info-container">
-                    <ul>
-                        <p>Quick Links</p>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                    </ul>
-                </div>
-                <div class="info-container">
-                    <ul>
-                        <p>Support</p>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                    </ul>
-                </div>
-                <div class="info-container">
-                    <ul>
-                        <p>About Corel</p>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="social-container">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fas fa-rss"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- /section info -->
-    <!-- footer  -->
-
-    <footer>
-        <div class="container">
-            <div class="container-footer">
-                <div class="icons-container">
-                    <img src="https://www.painterartist.com/static/ptr/corelAdvantage.png" alt="">
-                    <img src="https://www.painterartist.com/static/common/images/logo-bbb.png" alt="">
-                    <img src="https://www.painterartist.com/static/common/images/logo-bbb.png" alt="">
-                </div>
-                <div class="list-container">
-                    <ul>
-                        <li>Terms of Use</li>
-                        <li>Privacy</li>
-                        <li>Cookies</li>
-                        <li>Copyright © 2021 Corel Corporation. All rights reserved.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <!-- /footer  -->
 
 
 
-
+<script src="dist/app.js"></script>
 
 </body>
 </html>
